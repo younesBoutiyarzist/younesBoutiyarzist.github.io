@@ -1,8 +1,8 @@
+<app-header (OpenEvent)="drawer.toggle()" ></app-header>
 <mat-drawer-container class="container" [hasBackdrop]="hasBackdrop">
     <mat-drawer #drawer>
-
             <div class="conc-button">
-              <button mat-button class="button">CV</button>
+              <button mat-button class="button"(click)="openSideBar();drawer.close()">CV</button>
             </div>
           <mat-divider></mat-divider>
           <div class="conc-button">
@@ -15,6 +15,6 @@
       <mat-divider></mat-divider>
     </mat-drawer>
     <mat-drawer-content>
-      <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+        <div>"OKOK"</div>
     </mat-drawer-content>
 </mat-drawer-container>
