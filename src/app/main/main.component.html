@@ -1,0 +1,20 @@
+<app-header (OpenEvent)="drawer.toggle()" ></app-header>
+<mat-drawer-container class="container" [hasBackdrop]="hasBackdrop">
+    <mat-drawer #drawer>
+            <div class="conc-button">
+              <button mat-button class="button"(click)="openSideBar();drawer.close()">CV</button>
+            </div>
+          <mat-divider></mat-divider>
+          <div class="conc-button">
+            <button mat-button class="button">Projet n°1: classification binaire</button>
+          </div>
+        <mat-divider></mat-divider>
+        <div class="conc-button">
+          <button mat-button class="button">Projet n°1: recuit simulé</button>
+        </div>
+      <mat-divider></mat-divider>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div>"OKOK"</div>
+    </mat-drawer-content>
+</mat-drawer-container>
