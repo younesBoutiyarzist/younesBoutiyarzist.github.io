@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 import { MainComponent } from './main/main.component';
 
@@ -16,7 +18,7 @@ import { MainComponent } from './main/main.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,7 @@ import { MainComponent } from './main/main.component';
     MatSidenavModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDividerModule,
     BrowserAnimationsModule
   ],
   providers: [],

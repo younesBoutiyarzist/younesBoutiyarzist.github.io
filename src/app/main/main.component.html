@@ -1,6 +1,20 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="hasBackdrop">
-    <mat-drawer #drawer>I'm a drawer</mat-drawer>
+<mat-drawer-container class="container" [hasBackdrop]="hasBackdrop">
+    <mat-drawer #drawer>
+
+            <div class="conc-button">
+              <button mat-button class="button">CV</button>
+            </div>
+          <mat-divider></mat-divider>
+          <div class="conc-button">
+            <button mat-button class="button">Projet n°1: classification binaire</button>
+          </div>
+        <mat-divider></mat-divider>
+        <div class="conc-button">
+          <button mat-button class="button">Projet n°1: recuit simulé</button>
+        </div>
+      <mat-divider></mat-divider>
+    </mat-drawer>
     <mat-drawer-content>
       <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
     </mat-drawer-content>
-  </mat-drawer-container>
+</mat-drawer-container>

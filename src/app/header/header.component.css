@@ -4,7 +4,8 @@
 
 .button {
     background-color: rgb(33, 33, 33);
-    
+    border: 0;
+    padding: 0 9px 0 9px;
     transition-duration: 0.4s;
 }
       
