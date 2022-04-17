@@ -7,16 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   hasBackdrop = true;
-  affichage = 0;
+  section = 0;
 
   constructor() { }
 
   ngOnInit() {
   }
-  openSideBar(): void {
-    console.log("OKOKO");
+  affichage(i:number): void {
+    this.section = i;
   }
-
 
   
 }
