@@ -1,0 +1,81 @@
+.example-viewport {
+    height: 100%;
+    width: 280px;
+  }
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction:  row-reverse ;
+    justify-content: end;
+}
+.example-img {
+    border-radius: 10%;
+    padding: 10px;
+    width: 180px;
+    height: 180px;
+}
+.upload {
+    width: 100%;
+    height: 100%;
+}
+.icon-display {
+    transform: scale(2.5);
+    border-radius: 5px;
+    padding: 30px 60px;
+    border: 1px solid white;
+
+ }
+.container-upload {
+    display: flex;
+    flex-direction:  row-reverse ;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+}
+ .container-icon {
+    display: flex;
+    align-items:  center;
+    height: 100%;
+    width: 100%;
+    justify-content:  center;
+    flex-direction:  column ;
+ }
+
+.presentation {
+
+    display: flex;
+    flex-direction:  column ;
+    width: 100%;
+    height: 100%;
+    white-space: normal;
+}
+h3{
+    margin-top: 20px;
+    font-size: 1.3em;
+    display: flex;
+    align-items:  center;
+    justify-content:  center;
+    font-weight: bold;
+}
+
+p {
+    display: flex;
+    align-items:  center;
+    flex-direction:  row ;
+    font-size: 1.1em;
+}
+
+.element {
+    margin-left: 10px;
+    display: flex;
+    justify-content:  space-evenly ;
+    flex-direction:  column ;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10%;
+}
+.button {
+    border: none;
+    background-color: transparent;
+}

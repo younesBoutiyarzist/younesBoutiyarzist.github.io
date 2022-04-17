@@ -1,0 +1,55 @@
+<div class="container">
+<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+    <div cdkDropList #photoList="cdkDropList" [cdkDropListData]="photos" [cdkDropListConnectedTo]="[todoList]"
+    class="example-list" (cdkDropListDropped)="drop($event)">
+        <h3 class="color">Some examples: </h3>
+        <div class="example-box" *ngFor="let photo of photos" cdkDrag>
+            <img  class ="example-img" [src]="photo">
+          <img *cdkDragPreview  class ="example-img" [src]="photo" >
+        </div>
+      </div>
+</cdk-virtual-scroll-viewport>
+    <div class="container-upload">
+        
+        <div
+        cdkDropList
+        #todoList="cdkDropList"
+        [cdkDropListData]="todo"
+        [cdkDropListConnectedTo]="[photoList]"
+        class="upload" 
+        (cdkDropListDropped)="drop($event)">
+        <h3 class="color">Make a Prediction </h3>
+        <div class="container-icon">
+            <button  class="button" (click)="getfile()"> <mat-icon class="icon-display" [ngStyle]="{'color':'white'}" >get_app</mat-icon> </button>
+            <p> Drag and Drop a given example </p>
+        </div>
+        <input id='fileid' type='file' hidden/>
+        </div>
+        <div class="presentation">
+            <h3 class="color">Presentation of the Project</h3>
+            <div class="element">
+                <p>
+                    <mat-icon class="color" >arrow_forward</mat-icon> Goal : recognize dogs and cats in images
+                </p>
+                <p>
+                    <mat-icon class="color" >arrow_forward</mat-icon> Training : 2000 image 64*64 for training the model
+                </p>
+                <p>
+                    <mat-icon class="color" >arrow_forward</mat-icon>  Transfer learning : VGG-16 trained on imageNet
+                </p>
+                <p>
+                    <mat-icon class="color" >arrow_forward</mat-icon>  Fine-tuning : VGG-16 trained with Adam and a small learning rate
+                </p>
+                <p>
+                    <mat-icon class="color"  >arrow_forward</mat-icon>  Validation : 90% accuracy on the validation set
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div *ngFor="let photo of photos; let index = index;">
+        <img [id]="index" [src]="photo" width=64px height=64px hidden>
+    </div>
+
+</div>

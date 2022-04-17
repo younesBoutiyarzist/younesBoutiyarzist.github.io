@@ -9,16 +9,27 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatDividerModule} from '@angular/material/divider';
-
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { MainComponent } from './main/main.component';
+import { Project1Component } from './project1/project1.component';
+import { Predict1Component } from './project1/predict1/predict1.component';
+import { CvComponent } from './cv/cv.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainComponent,
+    Project1Component,
+    Predict1Component,
+    CvComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +40,11 @@ import { MainComponent } from './main/main.component';
     MatFormFieldModule,
     MatInputModule,
     MatDividerModule,
-    BrowserAnimationsModule
+    DragDropModule,
+    ScrollingModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
