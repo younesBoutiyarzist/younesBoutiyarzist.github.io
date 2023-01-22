@@ -1,0 +1,46 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.student-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.student-name {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.student-description {
+    flex-basis: 100%;
+    text-align: justify;
+}
+
+.projects {
+    margin-top: 10px;
+    padding-bottom: 50px;
+}
+
+h1, h2, h3 {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.circle-image {
+    border-radius: 50%; /* This will create a circular border */
+    width: 300px; /* You can adjust the width and height as needed */
+    height: 300px;
+    border: 2px solid #333; /* add a border if you wish */
+  }
+
+  a {
+    color: white;
+  }
+li {
+    font-size: 1.3em;
+}
