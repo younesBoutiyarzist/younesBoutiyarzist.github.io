@@ -79,3 +79,10 @@ p {
     border: none;
     background-color: transparent;
 }
+
+.back {
+    display: flex;
+    align-items:  top;
+    justify-content:  top;
+    color: white;
+}

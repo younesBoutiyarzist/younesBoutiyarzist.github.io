@@ -4,6 +4,8 @@ import {MatDialog} from '@angular/material/dialog';
 import { Predict1Component } from './predict1/predict1.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import * as tf from '@tensorflow/tfjs';
+import { Output, EventEmitter} from '@angular/core';
+
 
 
 @Component({
@@ -19,6 +21,7 @@ export class Project1Component implements OnInit {
   todo:string[] = [];
 
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar) { }
+  @Output() HomeEvent = new EventEmitter<boolean>();
 
   ngOnInit(): void {
     this.loadModel();
@@ -30,6 +33,9 @@ export class Project1Component implements OnInit {
     this._snackBar.open('Model load','OK' , {
       duration: 2000
     });
+  }
+  openHome(): void {
+    this.HomeEvent.emit(true);
   }
 
   photos = [ 

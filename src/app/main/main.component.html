@@ -12,15 +12,11 @@
           <div class="conc-button">
             <button mat-button class="button"  (click)="affichage(2);drawer.close()">Binary Classification</button>
           </div>
-        <mat-divider></mat-divider>
-        <div class="conc-button">
-          <button mat-button class="button"  (click)="affichage(3);drawer.close()"> Inverse Probleme</button>
-        </div>
       <mat-divider></mat-divider>
     </mat-drawer>
     <mat-drawer-content>
-      <div *ngIf="section === 0" class="section"><app-home></app-home></div>
+      <div *ngIf="section === 0" class="section"><app-home (ClassifEvent)="affichage(2)" ></app-home></div>
       <div *ngIf="section === 1" class="section"><app-cv></app-cv></div>
-      <div *ngIf="section === 2" class="section"><app-project1></app-project1></div>
+      <div *ngIf="section === 2" class="section"><app-project1 (HomeEvent)="affichage(0)"></app-project1></div>
     </mat-drawer-content>
 </mat-drawer-container>
